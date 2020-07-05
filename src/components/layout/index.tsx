@@ -2,14 +2,14 @@
 import { jsx, css } from '@emotion/core';
 import React, { ReactNode } from 'react';
 import Header from 'src/components/layout/Header';
-import media from 'src/lib/styles/media';
-import pallete from 'src/lib/styles/palette';
+// import media from 'src/lib/styles/media';
+// import pallete from 'src/lib/styles/palette';
 
 interface LayoutProps {
   children: ReactNode;
 }
 
-function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div
       css={css`
@@ -20,6 +20,6 @@ function Layout({ children }: LayoutProps) {
       {children}
     </div>
   );
-}
+};
 
 export default Layout;

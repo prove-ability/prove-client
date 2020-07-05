@@ -4,7 +4,7 @@ import { css, jsx } from '@emotion/core';
 
 import palette from 'src/lib/styles/palette';
 
-function Content() {
+const Content: React.FC = () => {
   return (
     <div
       css={css`
@@ -37,6 +37,6 @@ function Content() {
       {/* <div>App 준비중. </div>  */}
     </div>
   );
-}
+};
 
 export default Content;

@@ -4,7 +4,7 @@ import { jsx, css } from '@emotion/core';
 
 interface P3Props {}
 
-function P3(props: P3Props) {
+const P3: React.FC<P3Props> = () => {
   return (
     <div
       css={css`
@@ -18,6 +18,6 @@ function P3(props: P3Props) {
       `}
     ></div>
   );
-}
+};
 
 export default P3;

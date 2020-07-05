@@ -2,11 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { jsx, css } from '@emotion/core';
 import palette from 'src/lib/styles/palette';
-import { createBrotliCompress } from 'zlib';
 
 interface HeaderProps {}
 
-function Header(props: HeaderProps) {
+const Header: React.FC<HeaderProps> = () => {
   const [scrollPostion, setScrollPostion] = useState(0);
   function onScroll(e: any) {
     // 스크롤 할때마다 state에 scroll한 만큼 scrollTop 값 증가하므로 이를 업데이트해줌,
@@ -16,6 +15,7 @@ function Header(props: HeaderProps) {
     setScrollPostion(scrollTop);
   }
   useEffect(() => {
+    // eslint-disable-next-line no-undef
     window.addEventListener('scroll', onScroll);
   }, []);
   return (
@@ -60,6 +60,6 @@ function Header(props: HeaderProps) {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

@@ -8,8 +8,11 @@ import { Spring } from 'react-spring/renderprops';
 
 interface P2Props {}
 
-function P2(props: P2Props) {
-  const [ref, inView, entry] = useInView({
+const P2: React.FC<P2Props> = () => {
+  // const [ref, inView, entry] = useInView({
+  //   threshold: 0,
+  // });
+  const [ref, inView] = useInView({
     threshold: 0,
   });
   useEffect(() => {
@@ -43,7 +46,6 @@ function P2(props: P2Props) {
         `}
       >
         <div
-          ref={ref}
           css={css`
             color: ${palette.gray4};
             font-weight: 400;
@@ -51,23 +53,24 @@ function P2(props: P2Props) {
             line-height: 70px;
             word-spacing: 5px;
           `}
+          ref={ref}
         >
           <animated.div style={springProps}>
             대한민국 국민{' '}
             <b>
               <Spring
+                config={{ duration: 2000 }}
                 from={{ number: 0 }}
                 to={{ number: 5184 }}
-                config={{ duration: 2000 }}
               >
                 {({ number }) => <span>{number.toFixed()}</span>}
               </Spring>
               {/* <animated.span>{Teprops.number}</animated.span> */}
               만명 중
               <Spring
+                config={{ duration: 2000 }}
                 from={{ number: 0 }}
                 to={{ number: 1 }}
-                config={{ duration: 2000 }}
               >
                 {({ number }) => <span>{number.toFixed()}</span>}
               </Spring>
@@ -86,6 +89,6 @@ function P2(props: P2Props) {
       </div>
     </div>
   );
-}
+};
 
 export default P2;

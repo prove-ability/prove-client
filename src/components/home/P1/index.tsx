@@ -6,7 +6,7 @@ import Content from './Content';
 
 interface P1Props {}
 
-function P1(props: P1Props) {
+const P1: React.FC<P1Props> = () => {
   return (
     <div
       css={css`
@@ -22,6 +22,6 @@ function P1(props: P1Props) {
       <Content />
     </div>
   );
-}
+};
 
 export default P1;
