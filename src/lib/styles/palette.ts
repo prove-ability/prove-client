@@ -31,6 +31,8 @@ const palette = {
   gray7: '#495057',
   gray8: '#343A40',
   gray9: '#212529',
+
+  border: '#CED4DA',
 };
 
 export default palette;

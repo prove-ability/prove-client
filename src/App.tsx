@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
 import loadable from '@loadable/component';
 import { Helmet } from 'react-helmet-async';
 import './index.css';
@@ -10,6 +9,10 @@ const loadableConfig = {
 };
 
 const HomePage = loadable(() => import('src/pages/HomePage'), loadableConfig);
+const RegisterPage = loadable(
+  () => import('src/pages/RegisterPage'),
+  loadableConfig,
+);
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
       </Helmet>
       <Switch>
         <Route path="/" component={HomePage} exact />
+        <Route path="/register" component={RegisterPage} />
       </Switch>
     </>
   );
