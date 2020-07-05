@@ -29,9 +29,11 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet-async": "^1.0.6",
+    "react-intersection-observer": "^8.26.2",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-spring": "^8.0.27",
     "react-styleguidist": "^11.0.8",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
@@ -43,14 +45,10 @@
     ]
   },
   "scripts": {
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -68,12 +66,6 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-links": "^5.3.19",
-    "@storybook/addons": "^5.3.19",
-    "@storybook/preset-create-react-app": "^3.1.2",
-    "@storybook/react": "^5.3.19",
-    "eslint": "^7.3.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0"

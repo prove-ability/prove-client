@@ -13,13 +13,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <div
       css={css`
-        ${media.large} {
-          max-width: 1200px;
-        }
-        ${media.medium} {
-          max-width: 1024px;
-        }
-        background-color: ${pallete.red1};
+        height: 100%;
       `}
     >
       <Header />

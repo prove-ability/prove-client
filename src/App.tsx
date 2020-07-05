@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import loadable from '@loadable/component';
 import { Helmet } from 'react-helmet-async';
-import Layout from 'src/components/layout';
+import './index.css';
 
 const loadableConfig = {
   fallback: <div>Loading...</div>,
@@ -22,11 +22,9 @@ function App() {
           content="https://lh3.googleusercontent.com/0tayCLosahuLdWB0_RB_BGt8jxx9RgyJMTliA4WlRcAM78ZgQG-4Ofe9PYUAwMOF_jE"
         />
       </Helmet>
-      <Layout>
-        <Switch>
-          <Route path="/" component={HomePage} exact />
-        </Switch>
-      </Layout>
+      <Switch>
+        <Route path="/" component={HomePage} exact />
+      </Switch>
     </>
   );
 }
