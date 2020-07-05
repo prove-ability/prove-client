@@ -56,7 +56,7 @@ const P2: React.FC<P2Props> = () => {
           ref={ref}
         >
           <animated.div style={springProps}>
-            대한민국 국민{' '}
+            대한민국 국민{'  '}
             <b>
               <Spring
                 config={{ duration: 2000 }}
