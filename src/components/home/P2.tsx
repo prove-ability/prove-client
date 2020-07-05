@@ -15,14 +15,14 @@ const P2: React.FC<P2Props> = () => {
   const [ref, inView] = useInView({
     threshold: 0,
   });
-  useEffect(() => {
-    set({ opacity: inView ? 1 : 0 });
-  }, [inView]);
   const [springProps, set] = useSpring(() => ({
     opacity: 1,
     from: { opacity: 0 },
     config: { duration: 2500 },
   }));
+  useEffect(() => {
+    set({ opacity: inView ? 1 : 0 });
+  }, [inView, set]);
   return (
     <div
       css={css`
