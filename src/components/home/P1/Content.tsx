@@ -32,7 +32,7 @@ const Content: React.FC = () => {
       >
         전시회의 모든 것,
         <br />
-        프로브에서 간편하게
+        프로브에서 간편하게 ??
       </div>
       {/* <div>App 준비중. </div>  */}
     </div>
