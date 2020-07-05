@@ -34,7 +34,7 @@ function Content() {
         <br />
         프로브에서 간편하게
       </div>
-      {/* <div>App 준비중..</div>  */}
+      {/* <div>App 준비중. </div>  */}
     </div>
   );
 }
